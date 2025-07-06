@@ -1,0 +1,96 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.sidebar {
+  background-color: #333366;
+  color: white;
+  flex: 1 1 250px;
+  max-width: 300px;
+  padding: 20px;
+  text-align: center;
+}
+
+.sidebar img {
+  width: 150px;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-bottom: 15px;
+  margin-top: 50px;
+}
+
+.sidebar h1 {
+  margin: 10px 0 5px 0;
+  font-size: 24px;
+}
+
+.sidebar h2 {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.sidebar p, .sidebar a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin: 5px 0;
+}
+
+.main {
+  flex: 3 1 600px;
+  padding: 20px;
+}
+
+.section {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2.section-title {
+  color: #333366;
+  display: flex;
+  align-items: center;
+}
+
+h2.section-title i {
+  margin-right: 10px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.contact-item i {
+  margin-right: 20px;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar, .main {
+    max-width: 100%;
+  }
+}
