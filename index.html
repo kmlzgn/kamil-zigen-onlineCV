@@ -40,7 +40,8 @@
       color: white;
       min-height: 100vh;
       text-align: center;
-      padding: 20px;
+      padding: 20px;      
+      
     }
     .sidebar img {
       width: 150px;
@@ -124,7 +125,29 @@
     }
     body.pdfmode main {
       margin-left: 0;
-    }    
+    }
+    
+    @media (max-width: 768px) {
+  aside {
+    position: static; /* fixed özelliği kalksın */
+    
+  }
+
+  main {
+    
+    margin:0;
+  }
+
+   .accordion-button .h5 {
+    font-size: 1.1rem;
+  }
+  .accordion-button .text-muted {
+    font-size: 0.8rem;
+  }
+  .accordion-button {
+    padding: 0.5rem 1rem;
+  }
+}
 
     
   </style>
