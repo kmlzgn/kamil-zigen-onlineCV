@@ -2,128 +2,374 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kamil Zigen | Online CV</title>
-  <!-- Font Awesome for icons -->
+
+  <!-- SEO -->
+  <meta name="description" content="Kamil Zigen | Mechanical Engineer and Full-Stack Developer Candidate with Lean Six Sigma expertise. View my online CV.">
+  <meta name="author" content="Kamil Zigen">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Kamil Zigen | Online CV">
+  <meta property="og:description" content="Mechanical Engineer and Full-Stack Developer Candidate with Lean Six Sigma Black Belt certification.">
+  <meta property="og:image" content="https://kmlzgn.github.io/kamil-zigen-onlineCV/images/profile.png">
+  <meta property="og:url" content="https://kmlzgn.github.io/kamil-zigen-onlineCV/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kamil Zigen | Online CV">
+  <meta name="twitter:description" content="Mechanical Engineer and Full-Stack Developer Candidate with Lean Six Sigma expertise.">
+  <meta name="twitter:image" content="https://kmlzgn.github.io/kamil-zigen-onlineCV/images/profile.png">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background-color: #f5f5f5;
+    }    
+
+    .sidebar {
+      background-color: #333366;
+      color: white;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+    .sidebar img {
+      width: 150px;
+      border-radius: 50%;
+      border: 3px solid white;
+      margin-bottom: 15px;
+      margin-top: 40px;
+    }
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+    }
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+    .section {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .section h2 {
+      color: #333366;
+      margin-bottom: 15px;
+    }
+
+    .mb-10 {
+      margin-bottom: 10px;
+    }
+
+    .section ul li {
+      margin-bottom: 5px;
+    }
+
+    .badge {
+      margin-right: 5px;
+      font-size: 0.9rem;
+    }
+
+    @media print {
+      .btn, nav, footer {
+        display: none;
+      }
+      aside {
+        position: static !important;
+        width: 100% !important;
+      }
+      main {
+        margin-left: 0 !important;
+      }
+    }   
+    
+
+    aside {
+      position: fixed;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+    }
+
+    main {
+      margin-left: 25%;
+      padding: 20px;
+    }
+
+    main .section:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: box-shadow 0.3s ease;
+}
+
+
+    aside img:hover {
+      box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.5);
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+    }
+
+    body.pdfmode aside {
+      position: static;
+    }
+    body.pdfmode main {
+      margin-left: 0;
+    }    
+
+    
+  </style>
 </head>
+
 <body>
-  <div class="container">
-    <div class="sidebar">
-      <img src="images/profile.png" alt="Kamil Zigen Photo">
-      <h1>Kamil Zigen</h1>
-      <h2>Mechanical Engineer<br>Full-Stack Developer Candidate</h2>
-      <div class="contact-item">
-  <i class="bi bi-telephone-fill"></i>
-  <span>+90 535 085 56 52</span>
-</div>
+  <div class="container-fluid">
+    <div class="row">
 
-<div class="contact-item">
-  <i class="bi bi-envelope-fill"></i>
-  <span>kamilzigen@gmail.com</span>
-</div>
+      <!-- Sidebar -->
+      <aside class="col-md-3 sidebar d-flex flex-column align-items-center">
+        <img src="images/profile.png" alt="Kamil Zigen Photo">
+        <h1 class="h4 mt-3">Kamil Zigen</h1>
+        <p><strong>Operational Excellence & Lean Manufacturing Leader<br>Full-Stack Developer Candidate</strong></p>
+        <p><i class="bi bi-phone-fill"></i> +90 535 085 56 52</p>
+        <p><i class="bi bi-envelope-fill"></i> <a href=mailto:kamilzigen@gmail.com>kamilzigen@gmail.com</a></p>
+        <p><i class="bi bi-geo-alt-fill"></i> Izmir, Turkey</p>
+        <p><i class="bi bi-linkedin"></i> <a href="https://linkedin.com/in/kamil-zigen-b7265b3b" target="_blank">LinkedIn</a></p>
+        
+        <button class="btn btn-success" onclick="downloadPDF()"><i class="bi bi-file-earmark-pdf-fill"></i> Download as PDF
+        </button>
 
-<div class="contact-item">
-  <i class="bi bi-geo-alt-fill"></i>
-  <span>Izmir, Turkey</span>
-</div>
+        <br>
 
-<div class="contact-item">
-  <i class="bi bi-linkedin"></i>
-  <a href="https://linkedin.com/in/kamil-zigen-b7265b3b" target="_blank">LinkedIn</a>
-</div>
+        <button class="btn btn-secondary" onclick="window.location.href='ats-cv.html', '_blank'"><i class="bi bi-file-earmark-person-fill"></i> ATS Compatible CV
+        </button>
 
+      </aside>
+
+      <!-- Main content -->
+      <main class="col-md-9 p-4">
+        
+        <div class="section">
+          <h2><i class="bi bi-person-fill"></i> Profile</h2>
+          <p>Dynamic Lean Six Sigma Black Belt certified engineer with over 15 years of experience in the automotive and manufacturing sectors. I specialize in continuous improvement, operational excellence, and project management, resulting in significant cost savings and shorter cycle times. I effectively lead teams through change management and Kaizen facilitation, ensuring alignment with KPIs and strategic goals. With skills in CAD/CAM and process design, I focus on optimizing manufacturing processes to enhance productivity and quality while fostering a lean culture that empowers teams.</p>
+        </div>
+
+        <div class="section">
+  <h2><i class="bi bi-briefcase-fill"></i> Work Experience</h2>
+
+  <div class="accordion" id="workExperienceAccordion">
+
+    <!-- Senior Project Engineer -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button collapsed d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          <span class="h5 mb-0">Senior Project Engineer – Chiron Group SE</span>
+          <span class="text-nowrap ms-3 small text-muted">Nov 2023 – May 2025</span>
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#workExperienceAccordion">
+        <div class="accordion-body">
+          <ul>
+            <li>Led 28 turnkey projects, preparing time studies, cost estimates, and machinery selection.</li>
+            <li>Optimized CNC NC programs and collaborated on fixture and tool design improvements.</li>
+            <li>Managed project planning and progress tracking to meet deadlines and budgets.</li>
+          </ul>
+        </div>
+      </div>
     </div>
 
-    <div class="main">
-      <div class="section">
-        <h2 class="section-title"><i class="fas fa-user"></i> Profile</h2>
-        <p>Lean Six Sigma Black Belt certified engineer with 15+ years in manufacturing, specialized in CI, OPEX, and project management delivering cost savings and productivity gains.</p>
+    <!-- Plant Manager -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button collapsed d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <span class="h5 mb-0">Plant Manager – Trio Composites</span>
+          <span class="text-nowrap ms-3 small text-muted">Nov 2021 – Mar 2023</span>
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#workExperienceAccordion">
+        <div class="accordion-body">
+          <ul>
+            <li>Directed investment processes, aligning strategy with fullcycle production operations.</li>
+            <li>Led a team of 20; oversaw delivery of 1,600+ parts across 6 customers.</li>
+            <li>Handled procurement, CNC programming, quality control, and cost estimation.</li>
+          </ul>
+        </div>
       </div>
+    </div>
 
-      <div class="section">
-        <h2 class="section-title"><i class="fas fa-briefcase"></i> Work Experience</h2>
-        <h3>Senior Project Engineer – Chiron Group SE - Nov 2023 – May 2025</h3>
-    <ul>
-      <li>Led 28 turnkey projects, preparing time studies, cost estimates, and machinery selection.</li>
-      <li>Optimized CNC NC programs and collaborated on fixture and tool design improvements.</li>
-      <li>Managed project planning and progress tracking to meet deadlines and budgets.</li>
-    </ul>
-
-    <h3>Plant Manager – Trio Composites - Nov 2021 – Mar 2023</h3>
-    <ul>
-      <li>Directed investment processes, aligning strategy with fullcycle production operations.</li>
-      <li>Led a team of 20; oversaw delivery of 1,600+ parts across 6 customers.</li>
-      <li>Handled procurement, CNC programming, quality control, and cost estimation.</li>
-    </ul>
-
-    <h3>Process Leader – BorgWarner Automotive Systems - Apr 2018 – Oct 2021</h3>
-    <ul>
-      <li>Led Kaizen events cutting tool cost by 20% and scrap by 8%</li>
-      <li>LImplemented Lean tools (A3, TPM, VSM) to cut lead time by 12% and improve OEE.</li>
-      <li>Analyzed bottlenecks and coached team on continuous improvement methods.</li>
-    </ul>
-
-    <h3>Manufacturing Engineer – BorgWarner Automotive Systems - Apr 2013 – Apr 2018</h3>
-    <ul>
-      <li>Developed over 20 fixtures and 50+ cutting tools</li>
-      <li>Ensured IATF 16949 compliance in control plans, PFMEA, and audit readiness.</li>
-      <li>Handled customer audits for 10+ clients; zero major nonconformities. </li>
-    </ul>
+    <!-- Process Leader -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button collapsed d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          <span class="h5 mb-0">Process Leader – BorgWarner Automotive Systems</span>
+          <span class="text-nowrap ms-3 small text-muted">Apr 2018 – Oct 2021</span>
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#workExperienceAccordion">
+        <div class="accordion-body">
+          <ul>
+            <li>Led Kaizen events cutting tool cost by 20% and scrap by 8%</li>
+            <li>Implemented Lean tools (A3, TPM, VSM) to cut lead time by 12% and improve OEE.</li>
+            <li>Analyzed bottlenecks and coached team on continuous improvement methods.</li>
+          </ul>
+        </div>
       </div>
+    </div>
 
-      <div class="section">
-        <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
-        <p>M.Sc., Engineering Management, Izmir Institute of Technology, 2018</p>
-        <p>B.Sc., Mechanical Engineering, Dokuz Eylul University, 2008</p>
+    <!-- Manufacturing Engineer -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button collapsed d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          <span class="h5 mb-0">Manufacturing Engineer – BorgWarner Automotive Systems</span>
+          <span class="text-nowrap ms-3 small text-muted">Apr 2013 – Apr 2018</span>
+        </button>
+      </h2>
+      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#workExperienceAccordion">
+        <div class="accordion-body">
+          <ul>
+            <li>Developed over 20 fixtures and 50+ cutting tools</li>
+            <li>Ensured IATF 16949 compliance in control plans, PFMEA, and audit readiness.</li>
+            <li>Handled customer audits for 10+ clients; zero major nonconformities.</li>
+          </ul>
+        </div>
       </div>
+    </div>
 
-      <div class="section">
-        <h2 class="section-title"><i class="fas fa-cogs"></i> Technical Skills</h2>
-        <ul>
-          <li>MS Office</li>
-          <li>AutoCAD</li>
-          <li>DraftSight</li>
-          <li>SolidWorks</li>
-          <li>SolidCAM</li>
-          <li>Siemens NX</li>
-          <li>Esprit</li>
-          <li>Minitab</li>
-          <li>SAP</li>
-          <li>OEE Dashboards</li>
-          <li>Visual Factory Tools</li> 
-        </ul>
-      </div>
+  </div>
+</div>
 
-      <div class="section">
-        <h2 class="section-title"><i class="fas fa-lightbulb"></i> Core Competencies</h2>
-        <ul>
-          <li>Continuous Improvement</li>
-          <li>Operational Excellence</li>
-          <li>Lean Manufacturing</li>
-          <li>Lean Six Sigma</li>
-          <li>Project Management</li>
-          <li>KPI Monitoring</li>
-          <li>Root Cause Analysis (5 Why, Fishbone)</li>
-          <li>Kaizen Facilitation</li>
-          <li>Change Management</li>
-          <li>Process Design</li>
-          <li>CAD/CAM</li>
-         <li>Team Coaching</li>   
-        </ul>
-      </div>
 
-      <div class="section">
-        <h2 class="section-title"><i class="fas fa-certificate"></i> Certifications</h2>
-        <ul>
-          <li>Lean Six Sigma Black Belt (2025)</li>
-          <li>Red X Shainin (2014, 2016)</li>
-          <li>OHS Specialist C Grade</li>
-          <li>ISO 9001 & IATF 16949 Awareness</li>   
-        </ul>
-      </div>
+        <div class="section">
+          <h2><i class="bi bi-mortarboard-fill"></i> Education</h2>
+          <p><strong>M.Sc. Engineering Management</strong> Izmir Institute of Technology, 2018</p>
+          <p><strong>B.Sc. Mechanical Engineering</strong> Dokuz Eylul University, 2008</p>
+        </div>
+
+        <div class="section">
+          <h2><i class="bi bi-tools"></i> Technical Skills</h2>
+          <div>
+            <span class="badge bg-secondary mb-1">MS Office</span>
+            <span class="badge bg-secondary mb-1">AutoCAD</span>
+            <span class="badge bg-secondary mb-1">DraftSight</span>
+            <span class="badge bg-secondary mb-1">SolidWorks</span>
+            <span class="badge bg-secondary mb-1">SolidCAM</span>
+            <span class="badge bg-secondary mb-1">Siemens NX</span>
+            <span class="badge bg-secondary mb-1">Esprit</span>
+            <span class="badge bg-secondary mb-1">Minitab</span>
+            <span class="badge bg-secondary mb-1">SAP</span>
+            <span class="badge bg-secondary mb-1">OEE Dashboards</span>
+            <span class="badge bg-secondary mb-1">Visual Factory Tools</span>
+          </div>
+        </div>
+
+
+        <div class="section">
+          <h2><i class="bi bi-lightbulb-fill"></i> Core Competencies</h2>
+          <div>
+            <span class="badge bg-success mb-1">Continuous Improvement</span>
+            <span class="badge bg-success mb-1">Operational Excellence</span>
+            <span class="badge bg-success mb-1">Lean Manufacturing</span>
+            <span class="badge bg-success mb-1">Lean Six Sigma</span>
+            <span class="badge bg-success mb-1">Project Management</span>
+            <span class="badge bg-success mb-1">KPI Monitoring</span>
+            <span class="badge bg-success mb-1">Root Cause Analysis</span>
+            <span class="badge bg-success mb-1">Kaizen Facilitation</span>
+            <span class="badge bg-success mb-1">Change Management</span>
+            <span class="badge bg-success mb-1">Process Design</span>
+            <span class="badge bg-success mb-1">CAD/CAM</span>
+            <span class="badge bg-success mb-1">Team Coaching</span>
+          </div>
+        </div>
+
+
+        <div class="section">
+          <h2><i class="bi bi-award-fill"></i> Certifications</h2>
+          <ul>
+            <li>Lean Six Sigma Black Belt (2025)</li>
+            <li>Red X Shainin (2014, 2016)</li>
+            <li>OHS Specialist C Grade</li>
+            <li>ISO 9001 & IATF 16949 Awareness</li>   
+          </ul>
+        </div>
+
+        <div class="section" id="contact">
+          <h2><i class="bi bi-envelope-fill"></i> Contact Me</h2>
+          <form action="https://formspree.io/f/xwpbjjyj" method="POST">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" name="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" name="_replyto" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              <i class="bi bi-send-fill"></i> Send Message
+            </button>
+          </form>
+        </div>
+
+
+      </main>
     </div>
   </div>
+
+  <!-- Bootstrap JS (opsiyonel, interaktif component kullanırsan gerekir) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <script>
+  function downloadPDF() {
+    document.body.classList.add('pdfmode');
+    // pdf işlemleri
+    document.body.classList.remove('pdfmode');
+
+    const { jsPDF } = window.jspdf;
+
+    // Tüm accordion collapse elemanlarını seç
+    const collapses = document.querySelectorAll('.accordion-collapse');
+
+    // Hepsini aç
+    collapses.forEach(collapse => {
+      collapse.classList.add('show');
+    });
+
+    const doc = new jsPDF('p', 'pt', 'a4');
+
+    html2canvas(document.body, { scale: 3 }).then(canvas => {
+      const imgData = canvas.toDataURL('image/jpeg', 0.8); // kalite %80
+      const imgProps= doc.getImageProperties(imgData);
+      const pdfWidth = doc.internal.pageSize.getWidth();
+      const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+
+      doc.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+      doc.save("KamilZigen_CV.pdf");
+
+      // Tüm accordionları eski haline kapat
+      collapses.forEach(collapse => {
+        collapse.classList.remove('show');
+      });
+    });
+
+  }
+  </script>
+
+
 </body>
+
+
 </html>
