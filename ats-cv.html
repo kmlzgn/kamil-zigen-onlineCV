@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kamil Zigen | ATS Compatible CV</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      color: #000;
+      max-width: 800px;   /* CV genişliği sınırlı */
+      margin-left: auto;
+      margin-right: auto;
+    }
+    h1, h2, h3 {
+      color: #000;
+    }
+    ul {
+      margin-bottom: 20px;
+    }
+    .button {
+      display: inline-block;
+      background-color: #333366;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+    .button:hover {
+      background-color: #555599;
+    }
+
+    @media print {
+      .no-print {
+        display: none;
+      }
+    }
+  </style>
+</head>
+    
+<body>
+  
+  <h1>Kamil Zigen</h1>
+  <p>Email: kamilzigen@gmail.com | Phone: +90 535 085 56 52 | Izmir, Turkey</p>
+  <p>LinkedIn: linkedin.com/in/kamil-zigen-b7265b3b</p>
+
+  <h2>Profile</h2>
+  <p>Lean Six Sigma Black Belt certified engineer with 15+ years in manufacturing, specialized in CI, OPEX, and project management delivering cost savings and productivity gains.</p>
+
+  <h2>Work Experience</h2>
+  <h3>Senior Project Engineer – Chiron Group SE (Nov 2023 – May 2025)</h3>
+  <ul>
+    <li>Led 28 turnkey projects, preparing time studies, cost estimates, and machinery selection.</li>
+    <li>Optimized CNC NC programs and collaborated on fixture and tool design improvements.</li>
+    <li>Managed project planning and progress tracking to meet deadlines and budgets.</li>
+  </ul>
+
+  <h3>Plant Manager – Trio Composites (Nov 2021 – Mar 2023)</h3>
+  <ul>
+    <li>Directed investment processes, aligning strategy with fullcycle production operations.</li>
+    <li>Led a team of 20; oversaw delivery of 1,600+ parts across 6 customers.</li>
+    <li>Handled procurement, CNC programming, quality control, and cost estimation.</li>
+  </ul>
+
+  <h3>Process Leader – BorgWarner Automotive Systems (Apr 2018 – Oct 2021)</h3>
+  <ul>
+   <li>Led Kaizen events cutting tool cost by 20% and scrap by 8%</li>
+   <li>Implemented Lean tools (A3, TPM, VSM) to cut lead time by 12% and improve OEE.</li>
+   <li>Analyzed bottlenecks and coached team on continuous improvement methods.</li>
+  </ul>
+
+  <h3>Manufacturing Engineer – BorgWarner Automotive Systems (Apr 2013 – Apr 2018)</h3>
+  <ul>
+    <li>Developed over 20 fixtures and 50+ cutting tools</li>
+    <li>Ensured IATF 16949 compliance in control plans, PFMEA, and audit readiness.</li>
+    <li>Handled customer audits for 10+ clients; zero major nonconformities.</li>
+  </ul>
+
+  <!-- Diğer iş deneyimlerin aynı formatta devam edecek -->
+
+  <h2>Education</h2>
+  <h3>M.Sc. Engineering Management – Izmir Institute of Technology, 2018</h3>
+  <h3>B.Sc. Mechanical Engineering – Dokuz Eylul University, 2008</h3>
+
+  <h2>Skills</h2>
+  <p>MS Office, AutoCAD, DraftSight, SolidWorks, SolidCAM, Siemens NX, Esprit, Minitab, SAP, OEE Dashboards, Visual Factory Tools</p>
+
+  <h2>Core Competencies</h2>
+  <p>Continuous Improvement, Operational Excellence, Lean Manufacturing, Lean Six Sigma, Project Management, KPI Monitoring, Root Cause Analysis (5 Why, Fishbone), Kaizen Facilitation, Change Management, Process Design, CAD/CAM, Team Coaching</p>
+
+  <h2>Certifications</h2>
+  <p>Lean Six Sigma Black Belt (2025), Red X Shainin (2014, 2016), OHS Specialist C Grade, ISO 9001 & IATF 16949 Awareness</p>
+
+  <!-- ...existing code... -->
+
+    <!-- Download PDF butonunu güncelle -->
+    
+    <a href="index.html" class="button no-print">Return to CV</a>
+    <a href="#" class="button no-print" onclick="window.print(); return false;">Download PDF</a>
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+      function downloadPDF() {
+        document.querySelector('.no-print').style.display = 'none';
+        html2pdf()
+          .set({
+            margin: 0.5,
+            filename: 'Kamil_Zigen_ATS_CV.pdf',
+            html2canvas: { scale: 2, useCORS: true },
+            jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+          })
+          .from(document.body)
+          .save()
+          .then(() => {
+            document.querySelector('.no-print').style.display = '';
+          });
+      }
+    </script>
+    <!-- ...existing code... -->
+
+  <!-- PDF export script -->
+  
+</body>
+</html>
